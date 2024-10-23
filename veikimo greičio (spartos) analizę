@@ -1,0 +1,23 @@
+Failų generavimas užtruko: 0 ms
+
+
+1. Duomenų nuskaitymas:
+1000 įrašų: 37 ms
+10,000 įrašų: 834 ms
+100,000 įrašų: 6464 ms
+1,000,000 įrašų: 47,997 ms
+Analizė: Duomenų nuskaitymo laikas auga beveik tiesiškai, kuo didesnis failas, tuo daugiau laiko reikia jį nuskaityti. Didėjant failų dydžiui, nuskaitymas užtrunka žymiai ilgiau.
+
+2. Studentų rūšiavimas į dvi grupes:
+1000 įrašų: 6 ms
+10,000 įrašų: 84 ms
+100,000 įrašų: 718 ms
+1,000,000 įrašų: 6633 ms
+Analizė: Rūšiavimas didesniais failais užtrunka ilgiau, tačiau mažesniems failams jis beveik nepastebimas.
+
+3. Rašymas į failus:
+1000 įrašų: 10 ms
+10,000 įrašų: 79 ms
+100,000 įrašų: 623 ms
+1,000,000 įrašų: 6135 ms
+Analizė: Išvedimas į failus taip pat auga proporcingai duomenų dydžiui. Kuo daugiau įrašų reikia apdoroti, tuo ilgiau trunka rašymas į naujus failus.
