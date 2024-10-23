@@ -1,4 +1,3 @@
-#include "manobib.h"
 #include "studentas.h"
 
 studentas::studentas(string vardas_, string pavarde_, vector<double> nd_, double egzaminas_) {
@@ -16,11 +15,11 @@ void studentas::Vid() {
 }
 
 void studentas::Rez() {
-    rez = vid * 0.4 + egz * 0.6; 
+    rez = vid * 0.4 + egz * 0.6;
 }
 
 double studentas::getGalutinisVid() const {
-    return rez;  
+    return rez;
 }
 
 vector<studentas> studentas::readFromFile(const string& filename) {
@@ -29,7 +28,7 @@ vector<studentas> studentas::readFromFile(const string& filename) {
     string line;
 
     if (file.is_open()) {
-        getline(file, line);  
+        getline(file, line);
 
         while (getline(file, line)) {
             istringstream iss(line);
@@ -37,10 +36,8 @@ vector<studentas> studentas::readFromFile(const string& filename) {
             vector<double> paz(5);
             double egz;
 
-           
             iss >> pavarde >> vardas >> paz[0] >> paz[1] >> paz[2] >> paz[3] >> paz[4] >> egz;
 
-           
             studentas student(vardas, pavarde, paz, egz);
             students.push_back(student);
         }
@@ -48,7 +45,7 @@ vector<studentas> studentas::readFromFile(const string& filename) {
         file.close();
     }
     else {
-        cout << "Failed to open the file: " << filename << endl;
+        cout << "Nepavyko atidaryti failo: " << filename << endl;
     }
 
     return students;
@@ -69,6 +66,6 @@ void studentas::writeToFile(const vector<studentas>& students, const string& fil
         file.close();
     }
     else {
-        cout << "Failed to open the file for writing: " << filename << endl;
+        cout << "Nepavyko atidaryti failo rasymui: " << filename << endl;
     }
 }
