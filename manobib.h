@@ -1,15 +1,14 @@
 #pragma once
 
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <algorithm>
 #include <string>
 #include <numeric>
-#include <algorithm>
-
+#include <chrono>
 
 using std::cout;
 using std::cin;
@@ -24,3 +23,8 @@ using std::left;
 using std::right;
 using std::fixed;
 using std::setprecision;
+using std::accumulate;
+using std::partition;
+using std::chrono::milliseconds;
+using std::chrono::high_resolution_clock;
+using std::chrono::duration_cast;
