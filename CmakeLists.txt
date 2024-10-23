@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(StudentSorting)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+include_directories(${PROJECT_SOURCE_DIR})
+
+add_executable(StudentSorting 
+    V1.0.cpp 
+    studentas.cpp
+    studentas.h
+    manobib.h
+)
+
+if(MSVC)
+    target_compile_options(StudentSorting PRIVATE /W4)
+else()
+    target_compile_options(StudentSorting PRIVATE -Wall -Wextra -Wpedantic)
+endif()
