@@ -11,10 +11,10 @@ public:
     studentas() = default;
     studentas(string, string, vector<double>, double);
 
-    void Vid();   
-    void Rez();  
-    double getGalutinisVid() const;  
+    void Vid();
+    void Rez();
+    double getGalutinisVid() const;
 
-    static vector<studentas> readFromFile(const string& filename);  
-    static void writeToFile(const vector<studentas>& students, const string& filename);  
+    static vector<studentas> readFromFile(const string& filename);
+    static void writeToFile(const vector<studentas>& students, const string& filename);
 };
